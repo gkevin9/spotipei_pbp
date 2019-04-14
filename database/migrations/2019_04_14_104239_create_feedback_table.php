@@ -17,6 +17,8 @@ class CreateFeedbackTable extends Migration
             $table->string('feedback_id',5);
             $table->string('comment');
             $table->date('input_date');
+            $table->string('user_id',5);
+            $table->foreign('user_id')->references('user_id')->on('user')->onDelete('cascade');
             $table->timestamps();
         });
     }
