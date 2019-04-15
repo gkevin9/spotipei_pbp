@@ -10,6 +10,7 @@ class User extends Authenticatable
 {
     protected $primaryKey = 'user_id';
     public $incrementing = false;
+    //protected $table = 'user';
 
     public function playlist(){
         return $this->hasMany('App\Playlist');
